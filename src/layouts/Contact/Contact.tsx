@@ -36,11 +36,18 @@ export default function Contact() {
     setResponseMsg("");
 
     try {
+      const start = Date.now();
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
+      // Force at least 2 seconds of loading animation
+      const elapsed = Date.now() - start;
+      if (elapsed < 2000) {
+        await new Promise(r => setTimeout(r, 2000 - elapsed));
+      }
 
       if (res.ok) {
         setResponseMsg(
@@ -136,9 +143,14 @@ export default function Contact() {
         </div>
 
         <button type="submit" className={styles.submitBtn} disabled={loading}>
-          {loading
-            ? language === "tr" ? "Gönderiliyor..." : "Sending..."
-            : language === "tr" ? "Bağlantı Kur" : "Get in Touch"}
+          {loading ? (
+            <span className={styles.loadingWrapper}>
+              <span className={styles.spinner}></span>
+              {language === "tr" ? "Gönderiliyor..." : "Sending..."}
+            </span>
+          ) : (
+            language === "tr" ? "Bağlantı Kur" : "Get in Touch"
+          )}
         </button>
 
         {responseMsg && (
