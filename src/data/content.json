@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "tr": {
+      "role": "Bilgisayar Mühendisi & Yazılım Geliştirici",
+      "intro": "Kullanıcı odaklı mobil uygulamalar ve ölçeklenebilir backend sistemleri geliştiriyorum.",
+      "name": "Ayşe AKTAŞ"
+    },
+    "en": {
+      "role": "Computer Engineer & Software Developer",
+      "intro": "I build user-focused mobile applications and scalable backend systems.",
+      "name": "Ayşe AKTAŞ"
+    }
+  },
+  "about": {
+    "tr": {
+      "description": "Sakarya Üniversitesi Bilgisayar Mühendisliği mezunuyum ve aynı üniversitede tezli yüksek lisansıma devam ediyorum. Mobil (Flutter) ve backend (Go) alanlarındaki tecrübemle, kullanıcı odaklı, ölçeklenebilir ve sürdürülebilir yazılım çözümleri geliştiriyorum.",
+      "skills": [
+        "Flutter",
+        "Dart",
+        "Go",
+        "C#",
+        "Python",
+        "ASP.NET Core MVC",
+        "PostgreSQL",
+        "Microsoft SQL Server",
+        "Git",
+        "GitHub",
+        "REST API"
+      ],
+      "stats": [
+        {
+          "number": "3.21/4",
+          "label": "Not Ortalaması (GPA)"
+        },
+        {
+          "number": "4+",
+          "label": "Tamamlanan Proje"
+        },
+        {
+          "number": "2",
+          "label": "Sektör Stajı"
+        }
+      ]
+    },
+    "en": {
+      "description": "I am a Computer Engineering graduate from Sakarya University, currently pursuing my Master's degree (with thesis) at the same institution. With practical experience in mobile (Flutter) and backend (Go) development, I focus on building user-centric, scalable, and maintainable software solutions.",
+      "skills": [
+        "Flutter",
+        "Dart",
+        "Go",
+        "C#",
+        "Python",
+        "ASP.NET Core MVC",
+        "PostgreSQL",
+        "Microsoft SQL Server",
+        "Git",
+        "GitHub",
+        "REST API"
+      ],
+      "stats": [
+        {
+          "number": "3.21/4",
+          "label": "GPA"
+        },
+        {
+          "number": "4+",
+          "label": "Completed Projects"
+        },
+        {
+          "number": "2",
+          "label": "Internships"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "tr": {
+      "subtitle": "Yeni projeler, iş birliği veya sadece selam vermek için benimle iletişime geçebilirsiniz."
+    },
+    "en": {
+      "subtitle": "Feel free to reach out for new projects, collaboration, or just to say hello."
+    }
+  },
+  "footer": {
+    "year": "2026"
+  },
+  "security": {
+    "password": "password"
+  }
+}

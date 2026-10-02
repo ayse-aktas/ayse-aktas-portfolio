@@ -1,0 +1,91 @@
+.container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e4e4e4;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #f0f0f0;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #00bcd4;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.projectList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.projectItem {
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.projectItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.imagesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.projectImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+
+.projectDescription {
+  font-size: 1rem;
+  color: #f7ebeb;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.projectLink{
+  display: inline-block;
+  margin-top: 16px;
+  /* padding: 10px 20px; */
+  background-color: #07262b;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.projectLink:hover {
+  background-color: #385255;
+}

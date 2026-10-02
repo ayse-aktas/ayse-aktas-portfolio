@@ -1,0 +1,142 @@
+.sectionContainer {
+  padding: var(--spacing-xl) var(--spacing-md);
+  overflow: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-color);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--main-color), var(--hover-color));
+  margin: var(--spacing-md) auto 0;
+  border-radius: var(--radius-sm);
+}
+
+.scrollerWrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: var(--spacing-md) 0;
+}
+
+.logoScroller {
+  display: flex;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-sm) 0;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.logoScroller::-webkit-scrollbar {
+  display: none;
+}
+
+.logoItem {
+  min-width: 120px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.logoItem:hover {
+  transform: translateY(-5px);
+}
+
+.logoItem img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-xs);
+  transition: all var(--transition-fast);
+  filter: grayscale(50%);
+}
+
+.logoItem img:hover {
+  transform: scale(1.15);
+  filter: grayscale(0%) brightness(1.1);
+}
+
+.logoName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.logoItem:hover .logoName {
+  opacity: 1;
+  color: var(--main-color);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .sectionContainer {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .logoScroller {
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .title {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .logoItem {
+    min-width: 90px;
+  }
+
+  .logoItem img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logoScroller {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionContainer {
+    padding: var(--spacing-sm);
+  }
+
+  .logoItem {
+    min-width: 75px;
+  }
+
+  .logoItem img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logoName {
+    font-size: 0.75rem;
+  }
+
+  .logoScroller {
+    gap: var(--spacing-sm);
+  }
+}

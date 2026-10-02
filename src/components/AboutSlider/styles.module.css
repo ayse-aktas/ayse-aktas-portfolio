@@ -1,0 +1,106 @@
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  color: #ddd;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #eee;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sliderWrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.imageWrapper {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 300px;   /* Sabit kare genişliği */
+  height: 300px;  /* Sabit kare yüksekliği */
+  overflow: hidden;
+  border-radius: 12px; /* Köşeler hafif yuvarlak */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.profileImage {
+  width: 100% !important;  /* Kapla genişliği */
+  height: 100% !important; /* Kapla yüksekliği */
+  object-fit: cover;       /* Kırpma yapmadan kırp ve doldur */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+}
+
+.textContent {
+  flex: 2 1 550px;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.stats {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f39c12;
+  display: block;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .textContent {
+    flex: none;
+  }
+  .stats {
+    justify-content: center;
+    gap: 30px;
+  }
+}
