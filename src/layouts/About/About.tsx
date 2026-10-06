@@ -3,10 +3,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { useLanguage } from "@/context/LanguageContext";
+import contentData from "@/data/content.json";
 
 export default function About() {
   const { language } = useLanguage();
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(contentData.about);
 
   useEffect(() => {
     fetch("/api/content")

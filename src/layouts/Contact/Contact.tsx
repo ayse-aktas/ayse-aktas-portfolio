@@ -3,10 +3,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { useLanguage } from "@/context/LanguageContext";
+import contentData from "@/data/content.json";
 
 export default function Contact() {
   const { language } = useLanguage();
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(contentData.contact);
 
   const [formData, setFormData] = useState({
     fullName: "",

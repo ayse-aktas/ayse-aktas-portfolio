@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
+import contentData from "@/data/content.json";
 
 export default function Main() {
   const { language } = useLanguage();
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(contentData.hero);
 
   useEffect(() => {
     fetch("/api/content")
